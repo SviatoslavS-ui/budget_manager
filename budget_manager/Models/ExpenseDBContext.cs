@@ -9,7 +9,7 @@ namespace ExpenseManager.Models
 {
     public class ExpenseDBContext : DbContext
     {
-        private string connection_string = "Server=localhost\\SQLEXPRESS;Database=master;Trusted_Connection=True;";
+        private string connection_string = "Server=localhost\\SQLEXPRESS;Database=master;Trusted_Connection=True;TrustServerCertificate=True;";
         public virtual DbSet<ExpenseReport> ExpenseReport { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
